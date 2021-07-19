@@ -1,8 +1,8 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Provider;
+namespace Aldaflux\Bundle\SeoBundle\Provider;
 
-use Leogout\Bundle\SeoBundle\Seo\AbstractSeoGenerator;
+use Aldaflux\Bundle\SeoBundle\Seo\AbstractSeoGenerator;
 
 /**
  * Description of SeoGeneratorProvider.

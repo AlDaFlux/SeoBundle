@@ -1,9 +1,9 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Seo;
+namespace Aldaflux\Bundle\SeoBundle\Seo;
 
-use Leogout\Bundle\SeoBundle\Builder\TagBuilder;
-use Leogout\Bundle\SeoBundle\Model\RenderableInterface;
+use Aldaflux\Bundle\SeoBundle\Builder\TagBuilder;
+use Aldaflux\Bundle\SeoBundle\Model\RenderableInterface;
 
 /**
  * Description of AbstractSeoGenerator.

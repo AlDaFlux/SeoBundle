@@ -1,10 +1,10 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Seo\Og;
+namespace Aldaflux\Bundle\SeoBundle\Seo\Og;
 
-use Leogout\Bundle\SeoBundle\Exception\InvalidSeoGeneratorException;
-use Leogout\Bundle\SeoBundle\Seo\AbstractSeoConfigurator;
-use Leogout\Bundle\SeoBundle\Seo\AbstractSeoGenerator;
+use Aldaflux\Bundle\SeoBundle\Exception\InvalidSeoGeneratorException;
+use Aldaflux\Bundle\SeoBundle\Seo\AbstractSeoConfigurator;
+use Aldaflux\Bundle\SeoBundle\Seo\AbstractSeoGenerator;
 
 /**
  * Description of OgSeoConfigurator.

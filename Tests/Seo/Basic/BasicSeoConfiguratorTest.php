@@ -1,13 +1,13 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Tests\Seo\Basic;
+namespace Aldaflux\Bundle\SeoBundle\Tests\Seo\Basic;
 
-use Leogout\Bundle\SeoBundle\Builder\TagBuilder;
-use Leogout\Bundle\SeoBundle\Factory\TagFactory;
-use Leogout\Bundle\SeoBundle\Seo\Basic\BasicSeoConfigurator;
-use Leogout\Bundle\SeoBundle\Seo\Basic\BasicSeoGenerator;
-use Leogout\Bundle\SeoBundle\Seo\Twitter\TwitterSeoGenerator;
-use Leogout\Bundle\SeoBundle\Tests\TestCase;
+use Aldaflux\Bundle\SeoBundle\Builder\TagBuilder;
+use Aldaflux\Bundle\SeoBundle\Factory\TagFactory;
+use Aldaflux\Bundle\SeoBundle\Seo\Basic\BasicSeoConfigurator;
+use Aldaflux\Bundle\SeoBundle\Seo\Basic\BasicSeoGenerator;
+use Aldaflux\Bundle\SeoBundle\Seo\Twitter\TwitterSeoGenerator;
+use Aldaflux\Bundle\SeoBundle\Tests\TestCase;
 
 /**
  * Description of BasicSeoConfiguratorTest.
@@ -27,8 +27,8 @@ class BasicSeoConfiguratorTest extends TestCase
     }
 
     /**
-     * @expectedException \Leogout\Bundle\SeoBundle\Exception\InvalidSeoGeneratorException
-     * @expectedExceptionMessage Invalid seo generator passed to Leogout\Bundle\SeoBundle\Seo\Basic\BasicSeoConfigurator. Expected "Leogout\Bundle\SeoBundle\Seo\Basic\BasicSeoGenerator", but got "Leogout\Bundle\SeoBundle\Seo\Twitter\TwitterSeoGenerator".
+     * @expectedException \Aldaflux\Bundle\SeoBundle\Exception\InvalidSeoGeneratorException
+     * @expectedExceptionMessage Invalid seo generator passed to Aldaflux\Bundle\SeoBundle\Seo\Basic\BasicSeoConfigurator. Expected "Aldaflux\Bundle\SeoBundle\Seo\Basic\BasicSeoGenerator", but got "Aldaflux\Bundle\SeoBundle\Seo\Twitter\TwitterSeoGenerator".
      */
     public function testException()
     {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Seo\Basic;
+namespace Aldaflux\Bundle\SeoBundle\Seo\Basic;
 
-use Leogout\Bundle\SeoBundle\Exception\InvalidSeoGeneratorException;
-use Leogout\Bundle\SeoBundle\Seo\AbstractSeoConfigurator;
-use Leogout\Bundle\SeoBundle\Seo\AbstractSeoGenerator;
+use Aldaflux\Bundle\SeoBundle\Exception\InvalidSeoGeneratorException;
+use Aldaflux\Bundle\SeoBundle\Seo\AbstractSeoConfigurator;
+use Aldaflux\Bundle\SeoBundle\Seo\AbstractSeoGenerator;
 
 /**
  * Description of BasicSeoConfigurator.

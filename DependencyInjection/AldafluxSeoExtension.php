@@ -1,6 +1,6 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\DependencyInjection;
+namespace Aldaflux\Bundle\SeoBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -8,11 +8,10 @@ use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 /**
- * Description of LeogoutSeoExtension.
+ * Description of AldafluxSeoExtension.
  *
- * @author: leogout
  */
-class LeogoutSeoExtension extends Extension
+class AldafluxSeoExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -47,7 +46,7 @@ class LeogoutSeoExtension extends Extension
         }
         $config = array_merge($config['general'], $config[$configName]);
         $container->setParameter(
-            sprintf('leogout_seo.%s', $configName),
+            sprintf('aldaflux_seo.%s', $configName),
             $config
         );
         $loader->load(sprintf('seo/%s.xml', $configName));

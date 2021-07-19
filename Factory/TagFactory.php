@@ -1,10 +1,10 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Factory;
+namespace Aldaflux\Bundle\SeoBundle\Factory;
 
-use Leogout\Bundle\SeoBundle\Model\LinkTag;
-use Leogout\Bundle\SeoBundle\Model\MetaTag;
-use Leogout\Bundle\SeoBundle\Model\TitleTag;
+use Aldaflux\Bundle\SeoBundle\Model\LinkTag;
+use Aldaflux\Bundle\SeoBundle\Model\MetaTag;
+use Aldaflux\Bundle\SeoBundle\Model\TitleTag;
 
 /**
  * Description of TagFactory.

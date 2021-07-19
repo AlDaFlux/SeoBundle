@@ -1,10 +1,10 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Seo\Twitter;
+namespace Aldaflux\Bundle\SeoBundle\Seo\Twitter;
 
-use Leogout\Bundle\SeoBundle\Seo\TitleSeoInterface;
-use Leogout\Bundle\SeoBundle\Seo\DescriptionSeoInterface;
-use Leogout\Bundle\SeoBundle\Seo\ImageSeoInterface;
+use Aldaflux\Bundle\SeoBundle\Seo\TitleSeoInterface;
+use Aldaflux\Bundle\SeoBundle\Seo\DescriptionSeoInterface;
+use Aldaflux\Bundle\SeoBundle\Seo\ImageSeoInterface;
 
 /**
  * Description of TwitterSeoInterface.

@@ -9,7 +9,7 @@ and to let you configure less common ones with ease.
 ## Installation
 Install the bundle with the command:
 
-`composer require leogout/seo-bundle`
+`composer require aldaflux/seo-bundle`
 
 Register the bundle in your AppKernel:
 ```php
@@ -19,7 +19,7 @@ class AppKernel extends Kernel
     {
         $bundles = array(
             // ...
-            new Leogout\Bundle\SeoBundle\LeogoutSeoBundle(),
+            new Aldaflux\Bundle\SeoBundle\LeogoutSeoBundle(),
         );
     }
 }
@@ -40,7 +40,7 @@ See "Configuration reference" to get the whole configuration.
 
 **In your `config.yml`:**
 ```yml
-leogout_seo:
+aldafluxt_seo:
     general:
         title: Default title
         description: Default description.
@@ -130,7 +130,7 @@ Multiple interfaces are available to help the method guess which setters to call
 This is an exemple for the `basic` generator:
 **In your resource:**
 ```php
-use Leogout\Bundle\SeoBundle\Seo\Basic\BasicSeoInterface;
+use Aldaflux\Bundle\SeoBundle\Seo\Basic\BasicSeoInterface;
 
 class MyResource implements BasicSeoInterface
 {
@@ -215,7 +215,7 @@ This is the list of the different interfaces and what they extends:
 If the built-in generators don't suit your needs, LeogoutSeoBundle provides a way to create your own SEO generators.
 First, you have to create a class that extends the AbstractSeoGenerator class:
 ```php
-use Leogout\Bundle\SeoBundle\Seo\AbstractSeoGenerator;
+use Aldaflux\Bundle\SeoBundle\Seo\AbstractSeoGenerator;
 
 class MyTagsGenerator extends AbstractSeoGenerator
 {

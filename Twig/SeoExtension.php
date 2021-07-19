@@ -1,9 +1,9 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Twig;
+namespace Aldaflux\Bundle\SeoBundle\Twig;
 
-use Leogout\Bundle\SeoBundle\Model\RenderableInterface;
-use Leogout\Bundle\SeoBundle\Provider\SeoGeneratorProvider;
+use Aldaflux\Bundle\SeoBundle\Model\RenderableInterface;
+use Aldaflux\Bundle\SeoBundle\Provider\SeoGeneratorProvider;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
@@ -36,7 +36,7 @@ class SeoExtension extends AbstractExtension
     public function getFunctions()
     {
         return array(
-            new TwigFunction('leogout_seo', [$this, 'seo'], ['is_safe' => ['html']]),
+            new TwigFunction('aldaflux_seo', [$this, 'seo'], ['is_safe' => ['html']]),
         );
     }
 
@@ -65,6 +65,6 @@ class SeoExtension extends AbstractExtension
      */
     public function getName()
     {
-        return 'leogout_seo.twig.seo_extension';
+        return 'aldaflux_seo.twig.seo_extension';
     }
 }

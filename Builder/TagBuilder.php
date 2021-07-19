@@ -1,17 +1,16 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Builder;
+namespace Aldaflux\Bundle\SeoBundle\Builder;
 
-use Leogout\Bundle\SeoBundle\Factory\TagFactory;
-use Leogout\Bundle\SeoBundle\Model\LinkTag;
-use Leogout\Bundle\SeoBundle\Model\MetaTag;
-use Leogout\Bundle\SeoBundle\Model\RenderableInterface;
-use Leogout\Bundle\SeoBundle\Model\TitleTag;
+use Aldaflux\Bundle\SeoBundle\Factory\TagFactory;
+use Aldaflux\Bundle\SeoBundle\Model\LinkTag;
+use Aldaflux\Bundle\SeoBundle\Model\MetaTag;
+use Aldaflux\Bundle\SeoBundle\Model\RenderableInterface;
+use Aldaflux\Bundle\SeoBundle\Model\TitleTag;
 
 /**
  * Description of TagBuilder.
  *
- * @author: leogout
  */
 class TagBuilder implements RenderableInterface
 {

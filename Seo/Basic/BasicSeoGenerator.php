@@ -1,13 +1,13 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Seo\Basic;
+namespace Aldaflux\Bundle\SeoBundle\Seo\Basic;
 
-use Leogout\Bundle\SeoBundle\Model\MetaTag;
-use Leogout\Bundle\SeoBundle\Model\TitleTag;
-use Leogout\Bundle\SeoBundle\Seo\AbstractSeoGenerator;
-use Leogout\Bundle\SeoBundle\Seo\TitleSeoInterface;
-use Leogout\Bundle\SeoBundle\Seo\DescriptionSeoInterface;
-use Leogout\Bundle\SeoBundle\Seo\KeywordsSeoInterface;
+use Aldaflux\Bundle\SeoBundle\Model\MetaTag;
+use Aldaflux\Bundle\SeoBundle\Model\TitleTag;
+use Aldaflux\Bundle\SeoBundle\Seo\AbstractSeoGenerator;
+use Aldaflux\Bundle\SeoBundle\Seo\TitleSeoInterface;
+use Aldaflux\Bundle\SeoBundle\Seo\DescriptionSeoInterface;
+use Aldaflux\Bundle\SeoBundle\Seo\KeywordsSeoInterface;
 
 /**
  * Description of BasicSeoGenerator.
