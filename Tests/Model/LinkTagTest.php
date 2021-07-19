@@ -1,9 +1,9 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Tests\Model;
+namespace Aldaflux\Bundle\SeoBundle\Tests\Model;
 
-use Leogout\Bundle\SeoBundle\Model\LinkTag;
-use Leogout\Bundle\SeoBundle\Tests\TestCase;
+use Aldaflux\Bundle\SeoBundle\Model\LinkTag;
+use Aldaflux\Bundle\SeoBundle\Tests\TestCase;
 
 /**
  * Description of LinkTagTest.

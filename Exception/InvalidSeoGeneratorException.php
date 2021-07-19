@@ -1,6 +1,6 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Exception;
+namespace Aldaflux\Bundle\SeoBundle\Exception;
 
 /**
  * Description of InvalidSeoGeneratorException

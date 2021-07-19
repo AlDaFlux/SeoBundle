@@ -1,15 +1,9 @@
 {
-  "name":         "leogout/seo-bundle",
-  "description":  "A Symfony bundle to generate SEO meta tags.",
+  "name":         "aldaflux/seo-bundle",
+  "description":  "A Symfony bundle to generate SEO meta tags, forked from https://github.com/leogout/SeoBundle.",
   "keywords":     ["seo"],
   "type":         "symfony-bundle",
   "license":      "MIT",
-  "authors":      [
-    {
-      "name":     "leogout",
-      "email":    "leogout@gmail.com"
-    }
-  ],
   "require":      {
     "symfony/framework-bundle": "~2.8|~3.0|~4.0|~5.0"
   },
@@ -18,7 +12,7 @@
     "phpunit/phpunit": "^6.0"
   },
   "autoload":     {
-    "psr-4": { "Leogout\\Bundle\\SeoBundle\\": "" }
+    "psr-4": { "Aldaflux\\Bundle\\SeoBundle\\": "" }
   },
   "scripts": {
     "test": "phpunit -v"

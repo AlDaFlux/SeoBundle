@@ -1,4 +1,4 @@
-# LeogoutSeoBundle
+# AldafluxSeoBundle
 This bundle provides a simple and flexible API to manage _search engine optimization_ (SEO) tags in your application.
 Its main goal is to make it simple for you to manage the most common **meta**, **open graph** and **twitter card** tags
 and to let you configure less common ones with ease.
@@ -9,7 +9,7 @@ and to let you configure less common ones with ease.
 ## Installation
 Install the bundle with the command:
 
-`composer require leogout/seo-bundle`
+`composer require aldaflux/seo-bundle`
 
 Register the bundle in your AppKernel:
 ```php
@@ -19,7 +19,7 @@ class AppKernel extends Kernel
     {
         $bundles = array(
             // ...
-            new Leogout\Bundle\SeoBundle\LeogoutSeoBundle(),
+            new Aldaflux\Bundle\SeoBundle\LeogoutSeoBundle(),
         );
     }
 }
@@ -40,7 +40,7 @@ See "Configuration reference" to get the whole configuration.
 
 **In your `config.yml`:**
 ```yml
-leogout_seo:
+aldafluxt_seo:
     general:
         title: Default title
         description: Default description.
@@ -59,11 +59,11 @@ leogout_seo:
 **In your view:**
 ```twig
 <head>
-    {{ leogout_seo() }}
+    {{ aldaflux_seo() }}
 </head>
 ```
-**NOTE:** _You can provide a generator name to the `leogout_seo()` twig method to render it specifically.
-For example, to render the `basic` seo generator, you can use `leogout_seo('basic')`._
+**NOTE:** _You can provide a generator name to the `aldaflux_seo()` twig method to render it specifically.
+For example, to render the `basic` seo generator, you can use `aldaflux_seo('basic')`._
 
 
 **The result:**
@@ -89,7 +89,7 @@ However, if you want to use the associated generators without configuring any de
 (or configuring only the general ones), you can use this notation:_
 
 ```yml
-leogout_seo:
+aldaflux_seo:
    general:
        title: Default title
        description: Default description.
@@ -104,7 +104,7 @@ leogout_seo:
 
 You can get the `'[basic|twitter|og]` as a service to set or override any values.
 Each value of the configuration can be overrided using a setter of the following form:
-`$this->get('leogout_seo.provider.generator')->get('` **[basic|twitter|og]** `')->set` **[config field name]** `(` **[value]** `)`
+`$this->get('aldaflux_seo.provider.generator')->get('` **[basic|twitter|og]** `')->set` **[config field name]** `(` **[value]** `)`
 
 For example, if you want to change `title` and `robots` from `basic`, you can do this:
 ```php
@@ -112,7 +112,7 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        $this->get('leogout_seo.provider.generator')->get('basic')
+        $this->get('aldaflux_seo.provider.generator')->get('basic')
             ->setTitle('Title set in controller')
             ->setRobots(true, false); // they can be chained
         
@@ -130,7 +130,7 @@ Multiple interfaces are available to help the method guess which setters to call
 This is an exemple for the `basic` generator:
 **In your resource:**
 ```php
-use Leogout\Bundle\SeoBundle\Seo\Basic\BasicSeoInterface;
+use Aldaflux\Bundle\SeoBundle\Seo\Basic\BasicSeoInterface;
 
 class MyResource implements BasicSeoInterface
 {
@@ -171,7 +171,7 @@ class MyController extends Controller
             ->addKeyword('ho')
             ->addKeyword('let's go!');
         
-        $this->get('leogout_seo.provider.generator')->get('basic')->fromResource($myResource);
+        $this->get('aldaflux_seo.provider.generator')->get('basic')->fromResource($myResource);
         
         return $this->render('MyController:Default:index.html.twig');
     }
@@ -181,7 +181,7 @@ class MyController extends Controller
 **In your view:**
 ```twig
 <head>
-    {{ leogout_seo('basic') }}
+    {{ aldaflux_seo('basic') }}
 </head>
 ```
 
@@ -215,7 +215,7 @@ This is the list of the different interfaces and what they extends:
 If the built-in generators don't suit your needs, LeogoutSeoBundle provides a way to create your own SEO generators.
 First, you have to create a class that extends the AbstractSeoGenerator class:
 ```php
-use Leogout\Bundle\SeoBundle\Seo\AbstractSeoGenerator;
+use Aldaflux\Bundle\SeoBundle\Seo\AbstractSeoGenerator;
 
 class MyTagsGenerator extends AbstractSeoGenerator
 {
@@ -236,14 +236,14 @@ class MyTagsGenerator extends AbstractSeoGenerator
 }
 ```
 
-Then, register it as a service and add it a `leogout_seo.generator` tag and a custom alias.
-Don't forget the `@leogout_seo.builder` dependency:
+Then, register it as a service and add it a `aldaflux_seo.generator` tag and a custom alias.
+Don't forget the `@aldaflux_seo.builder` dependency:
 ```yaml
 services:
     app.seo_generator.my_tags:
         class:     AppBundle\Generator\MyTagsGenerator
-        arguments: [ '@leogout_seo.builder' ] # This is required
-        tags: { name: leogout_seo.generator, alias: my_tags }
+        arguments: [ '@aldaflux_seo.builder' ] # This is required
+        tags: { name: aldaflux_seo.generator, alias: my_tags }
 ```
 
 That's it, now you can use it alongside the others:
@@ -254,7 +254,7 @@ class MyController extends Controller
 {
     public function indexAction(Request $request)
     {
-        $this->get('leogout_seo.provider.generator')->get('my_tags')->setMyTag('cool');
+        $this->get('aldaflux_seo.provider.generator')->get('my_tags')->setMyTag('cool');
         
         return $this->render('MyController:Default:index.html.twig');
     }
@@ -264,7 +264,7 @@ class MyController extends Controller
 **In your view:**
 ```twig
 <head>
-    {{ leogout_seo('my_tags') }}
+    {{ aldaflux_seo('my_tags') }}
 </head>
 ```
 
@@ -277,7 +277,7 @@ class MyController extends Controller
 
 ## Configuration reference
 ```yml
-leogout_seo:
+aldaflux_seo:
     general:
         title: Default title
         description: Default description.

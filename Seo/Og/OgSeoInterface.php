@@ -1,10 +1,10 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Seo\Og;
+namespace Aldaflux\Bundle\SeoBundle\Seo\Og;
 
-use Leogout\Bundle\SeoBundle\Seo\TitleSeoInterface;
-use Leogout\Bundle\SeoBundle\Seo\DescriptionSeoInterface;
-use Leogout\Bundle\SeoBundle\Seo\ImageSeoInterface;
+use Aldaflux\Bundle\SeoBundle\Seo\TitleSeoInterface;
+use Aldaflux\Bundle\SeoBundle\Seo\DescriptionSeoInterface;
+use Aldaflux\Bundle\SeoBundle\Seo\ImageSeoInterface;
 
 /**
  * Description of OgSeoInterface.

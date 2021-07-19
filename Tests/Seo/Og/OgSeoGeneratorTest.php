@@ -1,13 +1,13 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Tests\Seo\Og;
+namespace Aldaflux\Bundle\SeoBundle\Tests\Seo\Og;
 
-use Leogout\Bundle\SeoBundle\Builder\TagBuilder;
-use Leogout\Bundle\SeoBundle\Factory\TagFactory;
-use Leogout\Bundle\SeoBundle\Model\MetaTag;
-use Leogout\Bundle\SeoBundle\Seo\Og\OgSeoGenerator;
-use Leogout\Bundle\SeoBundle\Seo\Og\OgSeoInterface;
-use Leogout\Bundle\SeoBundle\Tests\TestCase;
+use Aldaflux\Bundle\SeoBundle\Builder\TagBuilder;
+use Aldaflux\Bundle\SeoBundle\Factory\TagFactory;
+use Aldaflux\Bundle\SeoBundle\Model\MetaTag;
+use Aldaflux\Bundle\SeoBundle\Seo\Og\OgSeoGenerator;
+use Aldaflux\Bundle\SeoBundle\Seo\Og\OgSeoInterface;
+use Aldaflux\Bundle\SeoBundle\Tests\TestCase;
 
 /**
  * Description of OgSeoGeneratorTest.

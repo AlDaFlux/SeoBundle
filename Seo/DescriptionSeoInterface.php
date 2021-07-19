@@ -1,6 +1,6 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Seo;
+namespace Aldaflux\Bundle\SeoBundle\Seo;
 
 /**
  * Description of DescriptionSeoInterface.

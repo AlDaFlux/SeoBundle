@@ -1,6 +1,6 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Model;
+namespace Aldaflux\Bundle\SeoBundle\Model;
 
 /**
  * Description of TitleTag.

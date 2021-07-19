@@ -1,6 +1,6 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Tests;
+namespace Aldaflux\Bundle\SeoBundle\Tests;
 
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 

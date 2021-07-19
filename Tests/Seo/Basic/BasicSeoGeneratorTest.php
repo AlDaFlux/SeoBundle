@@ -1,14 +1,14 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Tests\Seo\Basic;
+namespace Aldaflux\Bundle\SeoBundle\Tests\Seo\Basic;
 
-use Leogout\Bundle\SeoBundle\Builder\TagBuilder;
-use Leogout\Bundle\SeoBundle\Factory\TagFactory;
-use Leogout\Bundle\SeoBundle\Model\MetaTag;
-use Leogout\Bundle\SeoBundle\Model\TitleTag;
-use Leogout\Bundle\SeoBundle\Seo\Basic\BasicSeoGenerator;
-use Leogout\Bundle\SeoBundle\Seo\Basic\BasicSeoInterface;
-use Leogout\Bundle\SeoBundle\Tests\TestCase;
+use Aldaflux\Bundle\SeoBundle\Builder\TagBuilder;
+use Aldaflux\Bundle\SeoBundle\Factory\TagFactory;
+use Aldaflux\Bundle\SeoBundle\Model\MetaTag;
+use Aldaflux\Bundle\SeoBundle\Model\TitleTag;
+use Aldaflux\Bundle\SeoBundle\Seo\Basic\BasicSeoGenerator;
+use Aldaflux\Bundle\SeoBundle\Seo\Basic\BasicSeoInterface;
+use Aldaflux\Bundle\SeoBundle\Tests\TestCase;
 
 /**
  * Description of BasicSeoGeneratorTest.

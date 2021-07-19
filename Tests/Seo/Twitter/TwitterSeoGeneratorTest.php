@@ -1,13 +1,13 @@
 <?php
 
-namespace Leogout\Bundle\SeoBundle\Tests\Seo\Twitter;
+namespace Aldaflux\Bundle\SeoBundle\Tests\Seo\Twitter;
 
-use Leogout\Bundle\SeoBundle\Builder\TagBuilder;
-use Leogout\Bundle\SeoBundle\Factory\TagFactory;
-use Leogout\Bundle\SeoBundle\Model\MetaTag;
-use Leogout\Bundle\SeoBundle\Seo\Twitter\TwitterSeoGenerator;
-use Leogout\Bundle\SeoBundle\Seo\Twitter\TwitterSeoInterface;
-use Leogout\Bundle\SeoBundle\Tests\TestCase;
+use Aldaflux\Bundle\SeoBundle\Builder\TagBuilder;
+use Aldaflux\Bundle\SeoBundle\Factory\TagFactory;
+use Aldaflux\Bundle\SeoBundle\Model\MetaTag;
+use Aldaflux\Bundle\SeoBundle\Seo\Twitter\TwitterSeoGenerator;
+use Aldaflux\Bundle\SeoBundle\Seo\Twitter\TwitterSeoInterface;
+use Aldaflux\Bundle\SeoBundle\Tests\TestCase;
 
 /**
  * Description of TwitterSeoGeneratorTest.
