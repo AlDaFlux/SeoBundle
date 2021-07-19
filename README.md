@@ -1,4 +1,4 @@
-# LeogoutSeoBundle
+# AldafluxSeoBundle
 This bundle provides a simple and flexible API to manage _search engine optimization_ (SEO) tags in your application.
 Its main goal is to make it simple for you to manage the most common **meta**, **open graph** and **twitter card** tags
 and to let you configure less common ones with ease.
