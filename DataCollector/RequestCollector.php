@@ -31,7 +31,6 @@ class RequestCollector extends DataCollector implements DataCollectorInterface
      $this->data = [
             'method' => $request->getMethod(),
             'acceptable_content_types' => $request->getAcceptableContentTypes(),
-            'seo' =>  $this->seo,
             'title' =>  $this->seo->GetTitle(), 
             'description' =>  $this->seo->getDescription(),
             'image' =>  $this->seo->getImage(),

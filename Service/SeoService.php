@@ -4,10 +4,17 @@ namespace Aldaflux\Bundle\SeoBundle\Service;
 
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
-
+use Symfony\Component\HttpFoundation\UrlHelper;
+use Symfony\Component\Asset\Packages;
+        
 class SeoService
 {
     private $title;
+    private $params;
+    
+    protected $assetsManager;
+    protected $urlHelper;
+    
     private $description;
     private $url;
     private $article;
@@ -16,8 +23,11 @@ class SeoService
     private $card;
   
     
-    public function __construct(ParameterBagInterface $parameters,RequestStack $requestStack)
+    public function __construct(ParameterBagInterface $parameters,RequestStack $requestStack,UrlHelper $urlHelper, Packages $assetsManager)
     {
+        $this->urlHelper=$urlHelper;
+        $this->assetsManager=$assetsManager;
+        
         $this->title = $parameters->Get("title");
         $this->description = $parameters->Get("description");
         $request = $requestStack->getCurrentRequest();
@@ -65,7 +75,8 @@ class SeoService
     }
     
 
-
+        
+        
     public function getImage(): ?string
     {
         return $this->image;
@@ -75,6 +86,12 @@ class SeoService
     {
         $this->image = $image;
         return $this;
+    }
+    
+    
+    public function setImageFromAsset(?string $image)
+    {
+          $this->image = $this->urlHelper->getAbsoluteUrl($this->assetsManager->getUrl($image));
     }
     
     
@@ -88,23 +105,6 @@ class SeoService
         $this->twitter = $twitter;
         return $this;
     }
-    
-    
-    
-    
-    
-    /*asic','og','twitter'];
-            foreach ($seoTypes as $seoType)
-            {
-                $this->seo->get($seoType)->setTitle($title);
-                $this->seo->get($seoType)->setDescription($description);
-            }
-            $this->seo->get("og")->setUrl("http://dev.nouvelleaquitaine.handidonnees.fr/page/allocataires-handicapes/allocataires-aeeh-enfants");
-            $this->seo->get("og")->setType("article");
-            $this->seo->get("og")->setImage($this->assetsManager->getUrl('build/img/logo1.png'));
-            $this->seo->get("twitter")->s*/
-    
-    
     
     public function renderMeta()
     {

@@ -3,7 +3,6 @@ services:
         class: Aldaflux\Bundle\SeoBundle\Service\SeoService
         public: true
         autowire: true
-        autoconfigure: true
    Aldaflux\Bundle\SeoBundle\Service\SeoService: '@aldaflux_seo.seo_service'
     
    Aldaflux\Bundle\SeoBundle\DataCollector\RequestCollector:
