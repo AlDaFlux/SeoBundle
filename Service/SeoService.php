@@ -114,22 +114,22 @@ class SeoService
         
         if ($this->getTitle())
         {
-            $retour_general.='<meta name="title" "'.$this->getTitle().'" />'."\n";
-            $retour_facebook.='<meta name="og:title" "'.$this->getTitle().'" />'."\n";
-            $retour_twitter.='<meta name="twitter:title" "'.$this->getTitle().'" />'."\n";
+            $retour_general.='<meta name="title" content="'.$this->getTitle().'" />'."\n";
+            $retour_facebook.='<meta name="og:title" content="'.$this->getTitle().'" />'."\n";
+            $retour_twitter.='<meta name="twitter:title" content="'.$this->getTitle().'" />'."\n";
         }
         
         if ($this->getDescription())
         {
-            $retour_general.='<meta name="description" "'.$this->getDescription().'" />'."\n";
-            $retour_facebook.='<meta name="og:description" "'.$this->getDescription().'" />'."\n";
-            $retour_twitter.='<meta name="twitter:description" "'.$this->getDescription().'" />'."\n";
+            $retour_general.='<meta name="description" content="'.$this->getDescription().'" />'."\n";
+            $retour_facebook.='<meta name="og:description" content="'.$this->getDescription().'" />'."\n";
+            $retour_twitter.='<meta name="twitter:description" content="'.$this->getDescription().'" />'."\n";
         }
         
         if ($this->getImage())
         {
-            $retour_facebook.='<meta name="og:image" "'.$this->getImage().'" />'."\n";
-            $retour_twitter.='<meta name="twitter:image" "'.$this->getImage().'" />'."\n";
+            $retour_facebook.='<meta name="og:image" content="'.$this->getImage().'" />'."\n";
+            $retour_twitter.='<meta name="twitter:image" content="'.$this->getImage().'" />'."\n";
             $retour_twitter.='<meta name="twitter:card" content="summary" />'."\n";
         }
         
