@@ -25,11 +25,17 @@ class Configuration implements ConfigurationInterface
         } else {
             $rootNode = $treeBuilder->root('aldaflux_seo');
         }
-
-        $this->configureGeneralTree($rootNode);
-        $this->configureBasicTree($rootNode);
-        $this->configureOgTree($rootNode);
-        $this->configureTwitterTree($rootNode);
+        
+        $rootNode->addDefaultsIfNotSet()
+            ->children()
+                ->scalarNode('title')->cannotBeEmpty()->end()
+                ->scalarNode('description')->cannotBeEmpty()->end()
+                ->scalarNode('image')->cannotBeEmpty()->end()
+                ->scalarNode('url')->cannotBeEmpty()->end()
+                ->scalarNode('keywords')->cannotBeEmpty()->end()
+                ->scalarNode('twitter')->cannotBeEmpty()->end()
+            ->end();
+        
 
         return $treeBuilder;
     }

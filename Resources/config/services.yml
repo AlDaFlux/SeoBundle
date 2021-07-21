@@ -1,0 +1,24 @@
+services:
+   aldaflux_seo.seo_service:
+        class: Aldaflux\Bundle\SeoBundle\Service\SeoService
+        public: true
+        autowire: true
+        autoconfigure: true
+   Aldaflux\Bundle\SeoBundle\Service\SeoService: '@aldaflux_seo.seo_service'
+    
+   Aldaflux\Bundle\SeoBundle\DataCollector\RequestCollector:
+        arguments: ["@aldaflux_seo.seo_service"]
+        tags:
+            -
+                name:     data_collector
+                template: '@AldafluxSeo/Collector/collector.html.twig'
+                id:       'aldaflux_seo.request_collector'
+        public: false
+   Aldaflux\Bundle\SeoBundle\Twig\SeoExtension:
+        arguments: ["@aldaflux_seo.seo_service"]
+        tags:
+            -
+                name:     twig.extension
+                id:       'aldaflux_seo.seo_service'
+#        public: false
+

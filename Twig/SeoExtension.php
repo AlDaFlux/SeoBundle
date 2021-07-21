@@ -1,12 +1,12 @@
 <?php
 
 namespace Aldaflux\Bundle\SeoBundle\Twig;
-
-use Aldaflux\Bundle\SeoBundle\Model\RenderableInterface;
-use Aldaflux\Bundle\SeoBundle\Provider\SeoGeneratorProvider;
+ 
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
+
+use Aldaflux\Bundle\SeoBundle\Service\SeoService;
 
 /**
  * Description of SeoExtension.
@@ -25,9 +25,9 @@ class SeoExtension extends AbstractExtension
      *
      * @param SeoGeneratorProvider $generatorProvider
      */
-    public function __construct(SeoGeneratorProvider $generatorProvider)
+    public function __construct( SeoService $seoService)
     {
-        $this->generatorProvider = $generatorProvider;
+        $this->seoService = $seoService;
     }
 
     /**
@@ -36,27 +36,10 @@ class SeoExtension extends AbstractExtension
     public function getFunctions()
     {
         return array(
-            new TwigFunction('aldaflux_seo', [$this, 'seo'], ['is_safe' => ['html']]),
+            new TwigFunction('aldaflux_seo', [$this->seoService, 'renderMeta'], ['is_safe' => ['html']]),
         );
     }
-
-    /**
-     * @param $alias
-     *
-     * @return string
-     */
-    public function seo($alias = null)
-    {
-        if (null !== $alias) {
-            return $this->generatorProvider->get($alias)->render();
-        }
-
-        return implode(PHP_EOL,
-            array_map(function (RenderableInterface $tag) {
-                return $tag->render();
-            }, $this->generatorProvider->getAll())
-        );
-    }
+ 
 
     /**
      * Returns the name of the extension.
