@@ -1,0 +1,16 @@
+{
+  "name":         "aldaflux/seo-bundle",
+  "description":  "A Symfony bundle to generate SEO meta tags, forked from https://github.com/leogout/SeoBundle.",
+  "keywords":     ["seo"],
+  "type":         "symfony-bundle",
+  "license":      "MIT",
+  "require":      {
+    "symfony/framework-bundle": "~3.0|~4.0|~5.0|~6.0|~7.0"
+  },
+  "autoload":     {
+    "psr-4": { "Aldaflux\\Bundle\\SeoBundle\\": "" }
+  },
+  "scripts": {
+    "test": "phpunit -v"
+  }
+}
