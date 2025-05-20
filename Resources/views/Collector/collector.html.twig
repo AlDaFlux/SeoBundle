@@ -1,0 +1,118 @@
+{# templates/data_collector/template.html.twig #}
+{% extends '@WebProfiler/Profiler/layout.html.twig' %}
+
+{% block toolbar %}
+    
+    {%  if collector.nbMetas %}
+    {% set icon %}
+        {% include('@AldafluxSeo/Collector/icons/seo.svg.twig') %}
+        <span class="sf-toolbar-value"> {{ collector.title }}</span>
+    {% endset %}
+        <style>
+            .sf-minitoolbar img.big
+            {
+                width: 100% ! important;
+            }
+        </style>
+
+
+        {% set text %}
+            
+            
+            {% if collector.title %}
+            <div class="sf-toolbar-info-piece">
+                <b>Titre</b>
+                <span class='sf-toolbar-status sf-toolbar-status-green'>{{ collector.title}}</span>
+            </div>
+            {% endif %}
+            {% if collector.description %}
+            <div class="sf-toolbar-info-piece">
+                <b>Description</b>
+                <span class='sf-toolbar-status sf-toolbar-status-green'>{{ collector.description}}</span>
+            </div>
+            {% endif %}
+            {% if collector.twitter %}
+            <div class="sf-toolbar-info-piece">
+                <b>Twitter</b>
+                <span class='sf-toolbar-status sf-toolbar-status-green'>{{ collector.twitter}}</span>
+            </div>
+            {% endif %}
+            
+            {% if collector.image %}
+            <div class="sf-toolbar-info-piece">
+                <b>Image</b>
+                <span class='sf-toolbar-status sf-toolbar-status-green'>{{ collector.image}}</span>
+            </div>
+            {% endif %}
+            
+        {% endset %}
+    {% else %}
+    {% set icon %}
+            {% include('@AldafluxSeo/Collector/icons/seo_inactive.svg.twig') %}
+        <span class="sf-toolbar-value">Pas de metas</span>
+    {% endset %}
+    {% endif %}
+
+     
+    {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: true}) }}
+{% endblock %}
+
+
+
+{% block menu %}
+    {% set profiler_markup_version = profiler_markup_version|default(1) %}
+
+    <span class="label ">
+        
+        <span class="icon">
+                 {% include('@AldafluxSeo/Collector/icons/seo.svg.twig') %}
+        </span>
+        <strong>SEO</strong>
+            <span class="count">
+                <span>{{ collector.nbMetas }}</span>
+            </span>
+        
+    </span>
+{% endblock %}
+
+
+{% block panel %}
+    {% import _self as helper %}
+
+    
+    {% set profiler_markup_version = profiler_markup_version|default(1) %}
+
+    {% if profiler_markup_version == 1 %}
+        <style>
+            h3 { margin-top: 2em; }
+            h3 span { color: #999; font-weight: normal; }
+            h3 small { color: #999; }
+            h4 { font-size: 14px; font-weight: bold; }
+            .card { background: #F5F5F5; margin: .5em 0 1em; padding: .5em; }
+            .card .label { display: block; font-size: 13px; font-weight: bold; margin-bottom: .5em; }
+            .card .card-block { margin-bottom: 1em; }
+        </style>
+    {% endif %}
+    
+    <h1>SEO</h1>
+    
+    <h1>{{ collector.title }}</h1>
+    
+    <h2>{{ collector.description}}</h2>
+    
+    <img class='big' width='25%' src='{{ collector.image}}'>
+    
+    
+
+    {% include('@AldafluxSeo/Collector/icons/twitter.svg.twig') %}
+
+    
+    
+
+    <div>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</div>
+    
+    
+{% endblock %}
+
+
+    
