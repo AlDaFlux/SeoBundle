@@ -39,7 +39,7 @@ class RequestCollector extends DataCollector implements DataCollectorInterface
         ];
     }
 
-    public function reset()
+    public function reset() : void
     {
         $this->data = [];
     }
