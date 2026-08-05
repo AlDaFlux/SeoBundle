@@ -69,7 +69,7 @@ class RequestCollector extends DataCollector implements DataCollectorInterface
     }
     
     
-    public function getName()
+    public function getName() : string
     {
         return 'aldaflux_seo.request_collector';
     }
